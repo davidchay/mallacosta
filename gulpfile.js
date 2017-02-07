@@ -6,27 +6,27 @@ var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify'),
 	connect = require('gulp-connect'),
-	cssmin = require('gulp-cssmin'),
-	pug = require('gulp-pug');
+	cssmin = require('gulp-cssmin');
+
 
 var path={
 	dev:{
-		css:'./builds/desarrollo/css/',
-		js:'./builds/desarrollo/js/',
-		html:'./builds/desarrollo/',
-		images:'./builds/desarrollo/images/'
+		scss:{
+			style:'./dev/scss/style/**/*.scss', //work
+			custom:'./dev/scss/*.scss'
+		},
+		css:'./dev/css/', //output
+		libs:'./dev/libs-js/*.js', //work
+		script:'./dev/js/mallacosta.js',
+		js:'./dev/js/', //output
+		html:'./dev/*html', //work
+		images:'./dev/images/' //
 	},
 	dist:{
-		css:'./builds/produccion/css',
-		js:'./builds/produccion/js',
-		html:'./builds/produccion/',
-		images:'./builds/produccion/images/'
-	},
-	component:{
-		scss:'./componentes/scss/**/*.scss',
-		js:'./componentes/js/**/*.js',
-		pug:'./componentes/pug/*.pug',
-		images:'./componentes/images/'
+		css:'./dist/css/', //output
+		js:'./dist/js/', //output
+		html:'./dist/', //output
+		images:'./dist/images/' //output
 	}
 };
 
@@ -34,12 +34,11 @@ gulp.task('test',function(){
 	gutil.log("Esto es un test");
 });
 
-gulp.task('sass',function(){
-	gulp.src(path.component.scss)
+gulp.task('style',function(){
+	gulp.src(path.dev.scss.style)
 	.pipe(sass({
-		outputStyle:'expanded',
+		 outputStyle:'expanded',
 		 errLogToConsole: true
-
 	}))
 	.pipe(autoprefixer({
 		version:['last 2']
@@ -54,9 +53,29 @@ gulp.task('sass',function(){
 	.pipe(gulp.dest(path.dist.css));
 });
 
+gulp.task('custom',function(){
+	gulp.src(path.dev.scss.custom)
+	.pipe(sass({
+		outputStyle:'expanded',
+		 errLogToConsole: true
+	}))
+	.pipe(autoprefixer({
+		version:['last 2']
+	}))
+	.pipe(concat('mallacosta.css'))
+	.pipe(gulp.dest(path.dev.css))
+	.pipe(connect.reload())
+	.pipe(cssmin())
+	.pipe(rename({
+		suffix:".min"
+	}))
+	.pipe(gulp.dest(path.dist.css));
+
+});
+
 
 gulp.task('js',function(){
-	gulp.src(path.component.js)
+	gulp.src(path.dev.libs)
 	.pipe(concat('script.js',{newLine:';'}))
 	.pipe(gulp.dest(path.dev.js))
 	.pipe(connect.reload())
@@ -65,28 +84,41 @@ gulp.task('js',function(){
 	.pipe(gulp.dest(path.dist.js));
 });
 
-gulp.task('pug',function(){
-	gulp.src(path.component.pug)
-	.pipe(pug({
-		pretty:true
-	}))
-	.pipe(gulp.dest(path.dev.html))
-	.pipe(connect.reload())
-	.pipe(gulp.dest(path.dist.html));
+gulp.task('html',function(){
+	gulp.src(path.dev.html)
+	.pipe(gulp.dest(path.dist.html))
+	.pipe(connect.reload());
 });
+
+gulp.task('script',function(){
+	gulp.src(path.dev.script)
+	.pipe(uglify())
+	.pipe(rename({suffix:'.min'}))
+	.pipe(gulp.dest(path.dist.js))
+	.pipe(connect.reload());
+});
+
+gulp.task('html',function(){
+	gulp.src(path.dev.html)
+	.pipe(gulp.dest(path.dist.html))
+	.pipe(connect.reload());
+});
+
 
 gulp.task('connect',function(){
 	connect.server({
-		root:'./builds/desarrollo/',
-		port:8080,
+		root:'./dev/',
+		port:8000,
 		livereload:true
 	});
 });
 
 gulp.task('watch',function(){
-	gulp.watch(path.component.scss,['sass']);
-	gulp.watch(path.component.js,['js']);
-	gulp.watch(path.component.pug,['pug']);
+	gulp.watch(path.dev.scss.style,['style']);
+	gulp.watch(path.dev.scss.custom,['custom']);
+	gulp.watch(path.dev.libs,['js']);
+	gulp.watch(path.dev.script,['script']);
+	gulp.watch(path.dev.html,['html']);
 });
 
-gulp.task('default',['js','sass','pug','connect','watch']);
+gulp.task('default',['js','style','custom','script','html','connect','watch']);

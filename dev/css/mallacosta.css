@@ -1,0 +1,17 @@
+/***
+Estilos de mmalacosta
+***/
+.container {
+  border: 1px solid red;
+}
+
+.columna {
+  border: 1px solid blue;
+}
+
+
+.smlts{
+  font-size: .8rem;
+  color:red;
+  display: block;
+}
