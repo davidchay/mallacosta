@@ -1,15 +1,224 @@
 /***
 Estilos de mmalacosta
 ***/
-.row{
+@import "style/boostrap/custom";
 
+body{
+	overflow-x: hidden;
 }
+
 #header-container{
+	background: rgb(60,60,60);
+	color:$white;
+	.top-contact a{
+		color:$white;
+		font-weight: 700;
+		@media screen and (max-width: 764px) {
+			color:$orange;
+		}
+	}
+	.branding-section{
+		padding-top:2.5rem;
+		padding-bottom: 2.5rem;
+		#content-logo{
+				@media screen and (max-width: 764px) {
+					margin: 0 auto;
+				}
+				width:278px;
+				#logo{
+						float: left;
+				}
+				#brand{
+					float: left;
+						#branding{
+							font-family: 'PRISTINA' !important;
+							font-size: 3.2rem;
+							border-bottom:2px solid $orange;
+							background: none;
+							span{
+								color:#00cbe8;
+							}
+						}
+						> span{
+							font-family: 'Open Sans', sans-serif;
+							text-transform: uppercase;
+							text-align: center;
+							display: block;
+							letter-spacing: 1.5px;
+						}
+				}
+		}
+	}
+	nav .nav-link,
+	nav .tel{
+		color: white;
+		@media screen and (max-width: 764px) {
+			i{
+				font-size:1.5rem;
+			}
+		}
+	}
+	.dropdown{
+		@media screen and (max-width: 764px) {
+			position:static;
+		}
+		.dropdown-menu{
+			@media screen and (max-width: 764px) {
+				width: 100%;
+			}
+		}
+	}
+}
+section{
+	padding:3rem 0;
+	.section-heading{
+		width: auto;
+		margin:0 auto;
+		margin-bottom: 2rem;
+		font-family: 'PRISTINA' !important;
+		font-size:2.8rem;
+		font-weight: 700;
+		color:$gray-dark;
+		&:after{
+			display:block;
+			content:"";
+			width:75%;
+			border-bottom:3px solid $orange;
+			margin:0 auto;
+		}
+	}
+	.section-subtitle{
+		font-family:$font-family-sans-serif;
+		font-weight: 300;
+		display:block;
+		width:100%;
+		text-align:center;
+		margin-bottom:3rem;
+		color: $gray-light ;
+	}
+	.card-block{
+		text-align: center;
+		font-family:$font-family-sans-serif;
+	}
+}
+
+#electronica{
 
 }
-.container{
-	border:1px solid red;
-}
-.columna{
-	border:1px solid blue;
+.product-link {
+            display: block;
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+            .product-hover {
+                background: fade-out($brand-primary, .5);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: all ease 0.5s;
+                -webkit-transition: all ease 0.5s;
+                -moz-transition: all ease 0.5s;
+                &:hover {
+                    opacity: 1;
+                }
+                .product-hover-content {
+                    position: absolute;
+                    width: 100%;
+                    height: 20px;
+                    font-size: 20px;
+                    text-align: center;
+                    top: 50%;
+                    margin-top: -12px;
+                    color: white;
+                    i {
+                        margin-top: -12px;
+                    }
+                    h3,
+                    h4 {
+                        margin: 0;
+                    }
+                }
+            }
+		}
+.portfolio-modal {
+    .modal-dialog{
+        margin: 0;
+        height: 100%;
+        width: auto;
+				position: relative;
+    }
+    .modal-content {
+        border-radius: 0;
+        background-clip: border-box;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: none;
+        min-height: 100%;
+				width: inherit;
+				position: absolute;
+        padding: 100px 0;
+				left:0;
+				right:0;
+        text-align: center;
+        h2 {
+            margin-bottom: 15px;
+            font-size: 3em;
+        }
+        p {
+            margin-bottom: 30px;
+        }
+        p.item-intro {
+            margin: 20px 0 30px;
+            font-family:$font-family-sans-serif;
+            font-style: italic;
+            font-size: 16px;
+        }
+        ul.list-inline {
+            margin-bottom: 30px;
+            margin-top: 0;
+        }
+        img {
+            margin-bottom: 30px;
+        }
+    }
+    .close-modal {
+        position: absolute;
+        width:75px;
+        height:75px;
+        background-color:transparent;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.3;
+        }
+        .lr {
+            height:75px;
+            width:1px;
+            margin-left:35px;
+            background-color:$gray-dark;
+            transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            /* IE 9 */
+            -webkit-transform: rotate(45deg);
+            /* Safari and Chrome */
+            z-index:1051;
+            .rl {
+                height:75px;
+                width:1px;
+                background-color:$gray-dark;
+                transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                /* IE 9 */
+                -webkit-transform: rotate(90deg);
+                /* Safari and Chrome */
+                z-index:1052;
+            }
+        }
+    }
+    .modal-backdrop {
+        opacity: 0;
+        display: none;
+    }
 }

@@ -3,11 +3,11 @@ ICONOS
 *******/
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?r6gzeh');
-  src:  url('fonts/icomoon.eot?r6gzeh#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?r6gzeh') format('truetype'),
-    url('fonts/icomoon.woff?r6gzeh') format('woff'),
-    url('fonts/icomoon.svg?r6gzeh#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?r6gzeh');
+  src:  url('../fonts/icomoon.eot?r6gzeh#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?r6gzeh') format('truetype'),
+    url('../fonts/icomoon.woff?r6gzeh') format('woff'),
+    url('../fonts/icomoon.svg?r6gzeh#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +26,25 @@ ICONOS
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.icon-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.icon-2x {
+  font-size: 2em;
+}
+.icon-3x {
+  font-size: 3em;
+}
+.icon-4x {
+  font-size: 4em;
+}
+.icon-5x {
+  font-size: 5em;
+}
+
 
 .icon-cancel:before {
   content: "\e900";

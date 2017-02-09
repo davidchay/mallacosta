@@ -1,0 +1,23 @@
+[
+    {
+      "titulo":"Camaras de reversa y frontal con pantalla",
+      "descripcion":"",
+      "precio":"$1,533",
+      "thumnail":"data/img/camaraReversaFrontal.jpg",
+      "fullImage":"data/img/camaraReversaFrontal-full.jpg"
+    },
+    {
+      "titulo":"Intercomunicador para Moto",
+      "descripcion":"2 vías, conductor y pasajero",
+      "precio":"$437",
+      "thumnail":"data/img/IntercomunicadorMotos.jpg",
+      "fullImage":"data/img/IntercomunicadorMotos-full.jpg"
+    },
+    {
+      "titulo":"Intercomunicador para Moto",
+      "descripcion":"2 vías, conductor y pasajero",
+      "precio":"$437",
+      "thumnail":"data/img/IntercomunicadorMotos.jpg",
+      "fullImage":"data/img/IntercomunicadorMotos-full.jpg"
+    }
+]
