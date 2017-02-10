@@ -19,8 +19,8 @@ $(function () {
     var plantilla=$('#productCardTlp').html();
     var template=Handlebars.compile(plantilla);
     var html=template(prd);
-    $("#prodcutosCard .row").append(html);
-    $("#prodcutosCard .row").show();
+    $("#prodcutosCard").append(html);
+    $("#prodcutosCard").show();
 
     //productos Modal
     var pltModal=$('#productModalTlp').html();
@@ -29,10 +29,19 @@ $(function () {
     $("#modalArea").append(htmlModal);
   //  $("#modalAreatt").show();
   });
-  // $.getJSON('../data/productos.json', function(data) {
-  //   var templateProductos = $('#productCardTlp').html();
-  //   var htmlProductos = Mustache.to_html(templateProductos, data);
-  //  #prodcutosCard').html(htmlProductos);
-  // });
-
+  Handlebars.registerHelper('listFirstThree', function (context, options)
+  {
+    var ret = "", data;
+    if (options.data) {
+    data = Handlebars.createFrame(options.data);
+  }
+    for (var i = 0, j = 3; i < j; i++)
+    {
+    if (data) {
+      data.index = i;
+    }
+      ret = ret + options.fn(context[i],{data:data});
+    }
+    return ret;
+  });
 });

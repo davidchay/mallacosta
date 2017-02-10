@@ -2,7 +2,7 @@
     {
       "titulo":"Camaras de reversa y frontal con pantalla",
       "descripcion":"",
-      "precio":"$1,533",
+      "precio":"$1,539",
       "thumnail":"data/img/camaraReversaFrontal.jpg",
       "fullImage":"data/img/camaraReversaFrontal-full.jpg"
     },
@@ -14,10 +14,20 @@
       "fullImage":"data/img/IntercomunicadorMotos-full.jpg"
     },
     {
-      "titulo":"Intercomunicador para Moto",
-      "descripcion":"2 vías, conductor y pasajero",
-      "precio":"$437",
-      "thumnail":"data/img/IntercomunicadorMotos.jpg",
-      "fullImage":"data/img/IntercomunicadorMotos-full.jpg"
+      "titulo":"Detector de cámaras y microfonos espías",
+      "descripcion":"",
+      "precio":"$490",
+      "thumnail":"data/img/detectorcamarasmicrofonosespias.jpg",
+      "fullImage":"data/img/detectorcamarasmicrofonosespias-full.jpg"
+    },
+    {
+      "titulo":"Diadema Sport Mp3",
+      "descripcion":"",
+      "precio":"$129",
+      "thumnail":"data/img/diademaSportMp3.jpg",
+      "fullImage":"data/img/diademaSportMp3-full.jpg"
     }
+
+
+
 ]

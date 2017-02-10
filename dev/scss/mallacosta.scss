@@ -6,9 +6,39 @@ Estilos de mmalacosta
 body{
 	overflow-x: hidden;
 }
-
+.content-logo{
+		@media screen and (max-width: 764px) {
+			margin: 0 auto;
+		}
+		width:278px;
+		.logo{
+				float: left;
+		}
+		.brand{
+			float: left;
+				.branding{
+					font-family: 'PRISTINA' !important;
+					font-size: 3.2rem;
+					border-bottom:2px solid $orange;
+					background: none;
+					span{
+						color:#00cbe8;
+					}
+				}
+				> span{
+					font-family: 'Open Sans', sans-serif;
+					text-transform: uppercase;
+					text-align: center;
+					display: block;
+					letter-spacing: 1.5px;
+				}
+		}
+}//content-logo
 #header-container{
-	background: rgb(60,60,60);
+	background-image: url('../images/bg_top.png');
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-color: rgb(60,60,60);
 	color:$white;
 	.top-contact a{
 		color:$white;
@@ -20,44 +50,26 @@ body{
 	.branding-section{
 		padding-top:2.5rem;
 		padding-bottom: 2.5rem;
-		#content-logo{
-				@media screen and (max-width: 764px) {
-					margin: 0 auto;
-				}
-				width:278px;
-				#logo{
-						float: left;
-				}
-				#brand{
-					float: left;
-						#branding{
-							font-family: 'PRISTINA' !important;
-							font-size: 3.2rem;
-							border-bottom:2px solid $orange;
-							background: none;
-							span{
-								color:#00cbe8;
-							}
-						}
-						> span{
-							font-family: 'Open Sans', sans-serif;
-							text-transform: uppercase;
-							text-align: center;
-							display: block;
-							letter-spacing: 1.5px;
-						}
-				}
-		}
+
 	}
-	nav .nav-link,
-	nav .tel{
-		color: white;
-		@media screen and (max-width: 764px) {
-			i{
-				font-size:1.5rem;
+
+	nav{
+		.nav-link{
+			&:hover,&:active,&:focus{
+				background-color: $orange;
 			}
 		}
+		.nav-link,
+		.tel{
+				color: white;
+				@media screen and (max-width: 764px) {
+					i{
+						font-size:1.5rem;
+					}
+				}
+			}
 	}
+
 	.dropdown{
 		@media screen and (max-width: 764px) {
 			position:static;
@@ -96,14 +108,19 @@ section{
 		margin-bottom:3rem;
 		color: $gray-light ;
 	}
-	.card-block{
-		text-align: center;
-		font-family:$font-family-sans-serif;
+	.card{
+		margin-bottom: 1rem;
+		.card-block{
+			text-align: center;
+			font-family:$font-family-sans-serif;
+		}
 	}
 }
 
 #electronica{
-
+	#prodcutosCard{
+		margin-bottom: 2.5rem;
+	}
 }
 .product-link {
             display: block;
@@ -221,4 +238,35 @@ section{
         opacity: 0;
         display: none;
     }
+}
+
+/*stlos del footer*/
+footer{
+	border-top:1px solid $brand-primary;
+	background-color: rgb(60,60,60);
+	padding: 1.5rem 0;
+	color:$white;
+	.content-logo{
+		width: 245px;
+		.logo img{
+			width: 90%
+		}
+		.brand{
+			.branding{
+				font-size:2.7rem;
+				border-bottom:1px solid $orange;
+			}
+			> span{
+				font-size: .8rem;
+			}
+		}
+
+	}
+	.text-footer{
+		span{
+			display: block;
+			font-size: .8rem;
+
+		}
+	}
 }
