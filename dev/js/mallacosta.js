@@ -12,7 +12,6 @@ $(function () {
   ///Mustache template
 
   $.getJSON('../data/productos.json', function(data) {
-    console.log(data);
     var prd={};
     prd.productos=data;
     //productos card.
