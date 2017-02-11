@@ -3,29 +3,120 @@
       "titulo":"Camaras de reversa y frontal con pantalla",
       "descripcion":"",
       "precio":"$1,539",
-      "thumnail":"data/img/camaraReversaFrontal.jpg",
-      "fullImage":"data/img/camaraReversaFrontal-full.jpg"
+      "thumnail":"data/img/electronica-01.jpg",
+      "fullImage":"data/img/electronica-01-full.jpg"
     },
     {
       "titulo":"Intercomunicador para Moto",
       "descripcion":"2 vías, conductor y pasajero",
       "precio":"$437",
-      "thumnail":"data/img/IntercomunicadorMotos.jpg",
-      "fullImage":"data/img/IntercomunicadorMotos-full.jpg"
+      "thumnail":"data/img/electronica-02.jpg",
+      "fullImage":"data/img/electronica-02-full.jpg"
     },
     {
       "titulo":"Detector de cámaras y microfonos espías",
       "descripcion":"",
       "precio":"$490",
-      "thumnail":"data/img/detectorcamarasmicrofonosespias.jpg",
-      "fullImage":"data/img/detectorcamarasmicrofonosespias-full.jpg"
+      "thumnail":"data/img/electronica-03.jpg",
+      "fullImage":"data/img/electronica-03-full.jpg"
     },
     {
       "titulo":"Diadema Sport Mp3",
       "descripcion":"",
       "precio":"$129",
-      "thumnail":"data/img/diademaSportMp3.jpg",
-      "fullImage":"data/img/diademaSportMp3-full.jpg"
+      "thumnail":"data/img/electronica-04.jpg",
+      "fullImage":"data/img/electronica-04-full.jpg"
+    },
+    {
+      "titulo":"Candado para laptop",
+      "descripcion":"",
+      "precio":"$68",
+      "thumnail":"data/img/electronica-05.jpg",
+      "fullImage":"data/img/electronica-05-full.jpg"
+    },
+    {
+      "titulo":"Convertidor de TV a Smart TV",
+      "descripcion":"",
+      "precio":"$1,175",
+      "thumnail":"data/img/electronica-06.jpg",
+      "fullImage":"data/img/electronica-06-full.jpg"
+    },
+    {
+      "titulo":"Audífonos Sport BT Bluetooth, llamadas y musica",
+      "descripcion":"",
+      "precio":"$159",
+      "thumnail":"data/img/electronica-07.jpg",
+      "fullImage":"data/img/electronica-07-full.jpg"
+    },
+    {
+      "titulo":"Audífonos con microfono para PC y Laptop",
+      "descripcion":"",
+      "precio":"$93",
+      "thumnail":"data/img/electronica-08.jpg",
+      "fullImage":"data/img/electronica-08-full.jpg"
+    },
+    {
+      "titulo":"Motoestéreo con bocinas alarma, MP3, Control remoto",
+      "descripcion":"",
+      "precio":"$639",
+      "thumnail":"data/img/electronica-09.jpg",
+      "fullImage":"data/img/electronica-09-full.jpg"
+    },
+    {
+      "titulo":"Modem / router, doble antena",
+      "descripcion":"",
+      "precio":"$318",
+      "thumnail":"data/img/electronica-10.jpg",
+      "fullImage":"data/img/electronica-10-full.jpg"
+    },
+    {
+      "titulo":"Auto estéreo, control remoto al volante",
+      "descripcion":"",
+      "precio":"$279",
+      "thumnail":"data/img/electronica-11.jpg",
+      "fullImage":"data/img/electronica-11-full.jpg"
+    },
+    {
+      "titulo":"Cristales electricos 2 puertas - Kit de conversión",
+      "descripcion":"",
+      "precio":"$1,398",
+      "thumnail":"data/img/electronica-12.jpg",
+      "fullImage":"data/img/electronica-12-full.jpg"
+    },
+    {
+      "titulo":"Auto estereo, MP3, FM, USB, SD",
+      "descripcion":"",
+      "precio":"$435",
+      "thumnail":"data/img/electronica-13.jpg",
+      "fullImage":"data/img/electronica-13-full.jpg"
+    },
+    {
+      "titulo":"Lente Telefoto Zoom 8x, con Clip para cualquier Cel",
+      "descripcion":"",
+      "precio":"$375",
+      "thumnail":"data/img/electronica-14.jpg",
+      "fullImage":"data/img/electronica-14-full.jpg"
+    },
+    {
+      "titulo":"Auto estéreo, se conecta al encendedor",
+      "descripcion":"",
+      "precio":"$95",
+      "thumnail":"data/img/electronica-15.jpg",
+      "fullImage":"data/img/electronica-15-full.jpg"
+    },
+    {
+      "titulo":"Camara Web",
+      "descripcion":"",
+      "precio":"$145",
+      "thumnail":"data/img/electronica-16.jpg",
+      "fullImage":"data/img/electronica-16-full.jpg"
+    },
+    {
+      "titulo":"Selfie brazo alambrico",
+      "descripcion":"",
+      "precio":"$85",
+      "thumnail":"data/img/electronica-17.jpg",
+      "fullImage":"data/img/electronica-17-full.jpg"
     }
 
 
