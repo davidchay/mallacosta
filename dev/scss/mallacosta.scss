@@ -37,8 +37,18 @@ body{
 				}
 		}
 }//content-logo
+.list-group{
+	.active{
+		background-color: rgb(60,60,60);
+		border-color:$gray;
+	}
+}
 .card{
 	margin-bottom: 1rem;
+	.card-header{
+		background-color: rgb(60,60,60);
+		color:white;
+	}
 	.card-block{
 		text-align: center;
 		font-family:$font-family-sans-serif;
@@ -81,6 +91,11 @@ body{
 	}
 
 	.dropdown{
+		.dropdown-item{
+			&:active{
+				background: $brand-secund;
+			}
+		}
 		@media screen and (max-width: 764px) {
 			position:static;
 		}

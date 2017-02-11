@@ -45,8 +45,18 @@ body {
   letter-spacing: 1.5px;
 }
 
+.list-group .active {
+  background-color: #3c3c3c;
+  border-color: #464a4c;
+}
+
 .card {
   margin-bottom: 1rem;
+}
+
+.card .card-header {
+  background-color: #3c3c3c;
+  color: white;
 }
 
 .card .card-block {
@@ -92,6 +102,10 @@ body {
   #header-container nav .tel i {
     font-size: 1.5rem;
   }
+}
+
+#header-container .dropdown .dropdown-item:active {
+  background: #ff8400;
 }
 
 @media screen and (max-width: 764px) {

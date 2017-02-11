@@ -26,8 +26,21 @@ $(function () {
     var templateModal=Handlebars.compile(pltModal);
     var htmlModal=templateModal(prd);
     $("#modalArea").append(htmlModal);
-  //  $("#modalAreatt").show();
+
+
   });
+  $.getJSON('../data/figurasMallasGalv.json', function(data) {
+    var items={};
+    items.mallaGalv=data;
+    console.log(data);
+    //Imagenes Malla ciclon
+    var ptlItem=$("#galleryItem").html();
+    var templateGalleryGalv=Handlebars.compile(ptlItem);
+    var htmlGalleryGalv=templateGalleryGalv(items);
+    $("#gallery").append(htmlGalleryGalv);
+    $("#gallery").show();
+  });
+
   Handlebars.registerHelper('listFirstThree', function (context, options)
   {
     var ret = "", data;

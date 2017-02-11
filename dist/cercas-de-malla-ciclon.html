@@ -88,23 +88,40 @@
         <header class="row">
           <h1 class="titulo">Cercas de malla ciclon</h1>
           <div class="col-12 text-center">
-            <h2 class="subtitulo lead text-muted">Para Escuelas,  Deportivos, Terrenos, Reclusorios, Casas, Jardín, Bodegas, Fabricas Etc.</h2>
+            <h2 class="subtitulo lead text-muted">Para Escuelas,  Deportivos, Terrenos, Reclusorios, Casas, Jardínes,<br> Bodegas, Fabricas Etc.</h2>
           </div>
         </header>
+        <h3>Para la Instalación Contamos con:</h3>
+
+        <dl class="row">
+          <dt class="col-sm-3">Malla galvanizada</dt>
+          <dd class="col-sm-9">De 2m, 2.50m, 3m, 4m de alto, con ó sin púa, con ó sin cinta de pvc, con ó sin Concertina.</dd>
+          <dd class="col-sm-9 offset-sm-3">Sobre terreno natural, barda, piso de concreto, muro de piedra, etc.</dd>
+
+          <dt class="col-sm-3">Con recubrimiento de pvc</dt>
+          <dd class="col-sm-9">Color verde.</dd>
+
+          <dt class="col-sm-3">Malla anti escalable</dt>
+          <dd class="col-sm-9">De 2.50 m de alto. Con ó sin concertina (Reclusorios).</dd>
+
+          <dt class="col-sm-3 text-truncate">PVC negro anti inflamable</dt>
+          <dd class="col-sm-9">De 2.40 m alto, con barra superior e interior (Reclusorios).</dd>
+
+          <dt class="col-sm-3">Portónes </dt>
+          <dd class="col-sm-9">De 4m, 6m, 8m etc. de ancho, en 2 hojas, con ó sin pua.</dd>
+
+          <dt class="col-sm-3">Puerta</dt>
+          <dd class="col-sm-9">De 1m de ancho, con ó sin pua.</dd>
+        </dl>
+
+        <h3>Intalamos en:</h3>
         <p>
-          <strong>Para la Instalación Contamos con malla:</strong>
-
+          Tapachula y todo el Soconusco: Suchiate, Frontera Hidalgo, Metapa, Tuxtla Chico, Cacahoatan, Union Juarez, Mazatan, Huehuetan, Tuzantan, Huixtla, Villa Comatitlan, Escuintla, Acacoyagua, Acapetahua, Mapastepec, Pijijiapan.
         </p>
+        <hr/>
 
-Galvanizada 2m, 2.50m , 3m , 4m alt, con ó sin púa.
-con ó sin cinta de pvc
-con ó sin Concertina
-sobre terreno natural, barda, piso de concreto, muro de piedra, etc.
-Con recubrimiento de pvc ( verde )
-Malla anti escalable 2.50 m alt. Con ó sin concertina (Reclusorios)
-PVC negro anti inflamable 2.40 m alt. Con barra superior e interior (Reclusorios)
-Portónes de 4m, 6m, 8m etc. de ancho, en 2 hojas, con ó sin pua.
-Puerta de 1m de ancho, con ó sin pua.
+        <div id="gallery" class="row"></div>
+
       </article>
       <aside class="call-to-action">
         <div class="container">
@@ -150,7 +167,16 @@ Puerta de 1m de ancho, con ó sin pua.
         </div>
       </div>
     </footer>
-
+    <script id="galleryItem" type="text/x-handlebars-template">
+      {{#each mallaGalv}}
+      <div class="col-md-4 col-xs-12">
+        <figure class="figure">
+          <img src="{{image}}" class="figure-img img-fluid rounded" alt="{{titulo}}">
+          <figcaption class="figure-caption">{{titulo}}</figcaption>
+        </figure>
+      </div>
+      {{/each}}
+    </script>
     <script src="./js/script.js"></script>
     <script src="./js/mallacosta.js"></script>
   </body>
