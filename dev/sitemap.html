@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compile" content="ie-edge">
-    <title>Electronica - Mallacosta Tapachula</title>
-    <meta name="description" content="electronica tapachula, audifonos, intercomunicador para moto, candado para laptop, Convertidor de TV a Smart TV, Audífonos con microfono para PC y Laptop, Modem / router, doble antena, Lente Telefoto Zoom 8x, con Clip para cualquier Cel, Auto estéreo, se conecta al encendedor">
+    <title>Mapa de sitio - Mallacosta Tapachula</title>
+    <meta name="description" content="instalacion de Cercas de malla ciclon, Concertinas, Lavaderos de concreto, materiales para Construccion,ferreteria, Instalación de cercas de alambre de púa, malla ciclón, Cercas De Alambres, Alambrados, Malla‎, Puertas Y Portones De Malla Ciclónica Galvanizada, Alambres De Puas Y Accesorios Todos Galvanizados.">
     <meta name="viewport" content="width=device-width, initial-scale-1">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/mallacosta.css">
@@ -86,13 +86,36 @@
     <main>
       <article class="container">
         <header class="row">
-          <h1 class="titulo">Electronica</h1>
+          <h1 class="titulo">Mapa de sitio</h1>
           <div class="col-12 text-center">
-            <h2 class="subtitulo lead text-muted">Te ofrecemos producto de calidad a precio competitivo.</h2>
+
           </div>
         </header>
-
-        <div id="prodcutosCard" class="row"></div>
+        <div class="row">
+            <div class="col-6 offset-3">
+              <ul class="list-unstyled">
+                <li><a href="/">Inicio</a></li>
+                <li>productos
+                  <ul>
+                    <li><a href="electronica.html">Electronica</a></li>
+                  </ul>
+                </li>
+                <li>Integer molestie lorem at massa</li>
+                <li>Facilisis in pretium nisl aliquet</li>
+                <li>Nulla volutpat aliquam velit
+                  <ul>
+                    <li>Phasellus iaculis neque</li>
+                    <li>Purus sodales ultricies</li>
+                    <li>Vestibulum laoreet porttitor sem</li>
+                    <li>Ac tristique libero volutpat at</li>
+                  </ul>
+                </li>
+                <li>Faucibus porta lacus fringilla vel</li>
+                <li>Aenean sit amet erat nunc</li>
+                <li>Eget porttitor lorem</li>
+              </ul>
+            </div>
+        </div>
       </article>
       <aside class="call-to-action">
         <div class="container">
@@ -137,57 +160,6 @@
         </div>
       </div>
     </footer>
-    <div id="modalArea"></div>
-    <!-- Templates mustache -->
-        <script id="productCardTlp" type="text/x-handlebars-template">
-          {{# each productos}}
-          <div class="col-12 col-md-4">
-              <div class="card">
-                <a href="#productModal{{@index}}" class="product-link" data-toggle="modal">
-                        <div class="product-hover">
-                            <div class="product-hover-content">
-                                <i class="icon-expand icon-3x"></i>
-                            </div>
-                        </div>
-                        <img class="card-img-top img-fluid" src="{{thumnail}}" alt="Card image cap">
-                </a>
-                <div class="card-block">
-                  <h4 class="card-title">{{titulo}} </h4>
-                  <p class="card-text">{{descripcion}}</p>
-                  <p class="card-text lead">{{precio}}</p>
-                  <a href="#productModal{{@index}}" class="btn btn-outline-primary" data-toggle="modal">Más Información</a>
-                </div>
-            </div>
-          </div>
-          {{/each}}
-        </script>
-        <script id="productModalTlp" type="text/x-handlebars-template">
-          {{#each productos}}
-          <div class="portfolio-modal modal fade" id="productModal{{@index}}" tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-dialog modal-lg" >
-                  <div class="modal-content">
-                      <div class="close-modal" data-dismiss="modal">
-                          <div class="lr">
-                              <div class="rl">
-                              </div>
-                          </div>
-                      </div>
-                      <div class="container">
-                          <div class="row">
-                              <div class="col-lg-8 offset-lg-2">
-                                  <div class="modal-body">
-                                      <!-- Project Details Go Here -->
-                                      <img class="img-fluid d-block mx-auto" src="{{fullImage}}" alt="">
-                                      <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          {{/each}}
-        </script>
 
     <script src="./js/script.js"></script>
     <script src="./js/mallacosta.js"></script>
