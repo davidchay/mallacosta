@@ -56,4 +56,18 @@ $(function () {
     }
     return ret;
   });
+
+  //json concertina
+  $.getJSON('../data/concertina.json', function(data) {
+    var concertina={};
+    concertina.imagenes=data;
+    //productos card.
+    var pltConcertina=$('#imagesConcertinaTlp').html();
+    var templ=Handlebars.compile(pltConcertina);
+    var html=templ(concertina);
+    $("#imagesConcertina").append(html);
+    $("#imagesConcertina").show();
+
+  });
+
 });

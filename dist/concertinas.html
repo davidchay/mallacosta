@@ -93,25 +93,31 @@
         </header>
 
         <div class="row">
-          <div class="col-12 col-md-8 offset-md-2">
-            <p>
-              La concerpúa o cintilla metalizada en espiral que cuenta con navajas punzocortantes. El complemento perfecto para su seguridad, ya que se puede colocar directamente en bardas o sobre la malla ciclón. Las concertinas están disponibles en acabado galvanizado y acero inoxidable de 30cm, 45cm y 60cm de diámetro.
-            </p>
+          <div class="col-12">
+            <h3>Instalamos Concertina ó Razor Ribbon...</h3>
+
+            <ul>
+              <li>Sobre Cerca de malla ciclon, barda, herrería , marquesinas , etc</li>
+                <li>Galvanizada ó de acero inoxidable  </li>
+                <li>De 18” ó 24” , sencilla ó Doble</li>
+                <li>En escuelas, industrias, bodegas, terrenos, Reclusorios, CEFERESOS, residencias, etc.</li>
+
+
+            </ul>
+            <h3> En Tapachula y toda la Costa del estado.</h3>
+              <p>
+                Suchiate, Frontera Hidalgo,Metapa, Tuxtla Chico, Cacahoatan, Union Juarez, Mazatan, Huehuetan,
+                Tuzantan, Huixtla, Villa Comatitlan, Escuintla, Acacoyagua, Acapetahua,
+                Mapastepec, Pijijiapan.
+
+              </p>
+
+
           </div>
-          <div class="col-3">
-            <img class="rounded img-fluid img-thumbnail" src="./data/img/concertina-1.jpg" alt="concetina">
-          </div>  
-          <div class="col-3">
-            <img class="rounded img-fluid img-thumbnail" src="./data/img/concertina-2.jpg" alt="concetina">
-            </div>
-            <div class="col-3">
-            <img class="rounded img-fluid img-thumbnail" src="./data/img/concertina-3.jpg" alt="concetina">
-            </div>
-            <div class="col-3">
-            <img class="rounded img-fluid img-thumbnail" src="./data/img/concertina-4.jpg" alt="concetina">
-          </div>
+
       </div>
-      </article>
+      <div id="imagesConcertina" class="row"></div>
+    </article>
       <aside class="call-to-action">
         <div class="container">
           <div class="row">
@@ -128,6 +134,7 @@
               </div>
             </div>
           </div><!-- ./row -->
+
       </div><!--contaniner -->
       </aside>
     </main>
@@ -155,6 +162,14 @@
         </div>
       </div>
     </footer>
+
+    <script id="imagesConcertinaTlp" type="text/x-handlebars-template">
+      {{#each imagenes}}
+      <div class="col-6 col-md-3" style="margin:1rem 0;">
+        <img class="rounded img-fluid img-thumbnail" src="{{image}}" alt="concetina">
+      </div>
+      {{/each}}
+    </script>
 
     <script src="./js/script.js"></script>
     <script src="./js/mallacosta.js"></script>
