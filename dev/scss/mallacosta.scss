@@ -113,7 +113,7 @@ section{
 		margin:0 auto;
 		margin-bottom: 2rem;
 		font-family: 'PRISTINA' !important;
-		font-size:3rem;
+		font-size:3.5rem;
 		font-weight: 700;
 		color:$gray-dark;
 		&:after{
@@ -123,6 +123,9 @@ section{
 			border-bottom:3px solid $orange;
 			margin:0 auto;
 		}
+        @media screen and (max-width: 576px) {
+            font-size:2.5rem;
+        }
 	}
 	.section-subtitle{
 		font-family:$font-family-sans-serif;
@@ -132,6 +135,9 @@ section{
 		text-align:center;
 		margin-bottom:3rem;
 		color: $gray-light ;
+        @media screen and (max-width: 576px) {
+            font-size:1.2rem;
+        }
 	}
 
 }
@@ -274,11 +280,18 @@ article{
 			border-bottom:3px solid $orange;
 			margin:0 auto;
 		}
+        @media screen and (max-width: 576px) {
+            font-size:2.5rem;
+        }
+
 	}
 	.subtitulo{
 		font-size: 2rem;
 		font-weight: 300;
 		margin-bottom: 3.5rem;
+        @media screen and (max-width: 576px) {
+            font-size:1.5rem;
+        }
 	}
 }
 .call-to-action{
@@ -322,7 +335,7 @@ footer{
 	.text-footer{
 		span{
 			display: block;
-			font-size: .8rem;
+			
 
 		}
 	}

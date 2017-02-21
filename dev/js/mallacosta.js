@@ -10,36 +10,38 @@ $( window ).resize(function() {
 
 $(function () {
   ///Mustache template
+  if($('#productCardTlp').length){
+    $.getJSON('../data/productos.json', function(data) {
+      var prd={};
+      prd.productos=data;
+      //productos card.
+      var plantilla=$('#productCardTlp').html();
+      var template=Handlebars.compile(plantilla);
+      var html=template(prd);
+      $("#prodcutosCard").append(html);
+      $("#prodcutosCard").show();
 
-  $.getJSON('../data/productos.json', function(data) {
-    var prd={};
-    prd.productos=data;
-    //productos card.
-    var plantilla=$('#productCardTlp').html();
-    var template=Handlebars.compile(plantilla);
-    var html=template(prd);
-    $("#prodcutosCard").append(html);
-    $("#prodcutosCard").show();
+      //productos Modal
+      var pltModal=$('#productModalTlp').html();
+      var templateModal=Handlebars.compile(pltModal);
+      var htmlModal=templateModal(prd);
+      $("#modalArea").append(htmlModal);
+    });
 
-    //productos Modal
-    var pltModal=$('#productModalTlp').html();
-    var templateModal=Handlebars.compile(pltModal);
-    var htmlModal=templateModal(prd);
-    $("#modalArea").append(htmlModal);
-
-
-  });
-  $.getJSON('../data/figurasMallasGalv.json', function(data) {
-    var items={};
-    items.mallaGalv=data;
-    console.log(data);
-    //Imagenes Malla ciclon
-    var ptlItem=$("#galleryItem").html();
-    var templateGalleryGalv=Handlebars.compile(ptlItem);
-    var htmlGalleryGalv=templateGalleryGalv(items);
-    $("#gallery").append(htmlGalleryGalv);
-    $("#gallery").show();
-  });
+  }
+  if($('#galleryItem').length){
+    $.getJSON('../data/figurasMallasGalv.json', function(data) {
+      var items={};
+      items.mallaGalv=data;
+      //Imagenes Malla ciclon
+      var ptlItem=$("#galleryItem").html();
+      var templateGalleryGalv=Handlebars.compile(ptlItem);
+      var htmlGalleryGalv=templateGalleryGalv(items);
+      $("#gallery").append(htmlGalleryGalv);
+      $("#gallery").show();
+    });
+    
+  }
 
   Handlebars.registerHelper('listFirstThree', function (context, options)
   {
@@ -58,16 +60,19 @@ $(function () {
   });
 
   //json concertina
-  $.getJSON('../data/concertina.json', function(data) {
-    var concertina={};
-    concertina.imagenes=data;
-    //productos card.
-    var pltConcertina=$('#imagesConcertinaTlp').html();
-    var templ=Handlebars.compile(pltConcertina);
-    var html=templ(concertina);
-    $("#imagesConcertina").append(html);
-    $("#imagesConcertina").show();
+  if($('#imagesConcertinaTlp').length){
+    $.getJSON('../data/concertina.json', function(data) {
+      var concertina={};
+      concertina.imagenes=data;
+      //productos card.
+      var pltConcertina=$('#imagesConcertinaTlp').html();
+      var templ=Handlebars.compile(pltConcertina);
+      var html=templ(concertina);
+      $("#imagesConcertina").append(html);
+      $("#imagesConcertina").show();
 
-  });
+    });
+    
+  }
 
 });

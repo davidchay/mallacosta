@@ -129,7 +129,7 @@ section .section-heading {
   margin: 0 auto;
   margin-bottom: 2rem;
   font-family: 'PRISTINA' !important;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: #292b2c;
 }
@@ -142,6 +142,12 @@ section .section-heading:after {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 576px) {
+  section .section-heading {
+    font-size: 2.5rem;
+  }
+}
+
 section .section-subtitle {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
@@ -150,6 +156,12 @@ section .section-subtitle {
   text-align: center;
   margin-bottom: 3rem;
   color: #636c72;
+}
+
+@media screen and (max-width: 576px) {
+  section .section-subtitle {
+    font-size: 1.2rem;
+  }
 }
 
 #electronica #prodcutosCard {
@@ -306,10 +318,22 @@ article .titulo:after {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 576px) {
+  article .titulo {
+    font-size: 2.5rem;
+  }
+}
+
 article .subtitulo {
   font-size: 2rem;
   font-weight: 300;
   margin-bottom: 3.5rem;
+}
+
+@media screen and (max-width: 576px) {
+  article .subtitulo {
+    font-size: 1.5rem;
+  }
 }
 
 .call-to-action {
@@ -356,5 +380,4 @@ footer .content-logo .brand > span {
 
 footer .text-footer span {
   display: block;
-  font-size: .8rem;
 }
