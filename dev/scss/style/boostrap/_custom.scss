@@ -101,7 +101,7 @@ $black:  #000 !default;
 $red:    #d9534f !default;
 $orange: #ff8400;
 $yellow: #ffd500 !default;
-$green:  #5cb85c !default;
+$green:  #2ECC40;
 $blue:   #0275d8 !default;
 $teal:   #5bc0de !default;
 $pink:   #ff5b77 !default;
@@ -117,7 +117,7 @@ $gray-lightest:             #f7f7f9 !default;
 // Reassign color vars to semantic color scheme
 $brand-primary:             #00cbe8;//$blue !default;
 $brand-secund:              $orange;
-$brand-success:             $green !default;
+$brand-success:             #2ECC40;
 $brand-info:                $teal !default;
 $brand-warning:             $orange !default;
 $brand-danger:              $red !default;
@@ -384,9 +384,9 @@ $btn-info-color:                 $white !default;
 $btn-info-bg:                    $brand-info !default;
 $btn-info-border:                $btn-info-bg !default;
 
-$btn-success-color:              $white !default;
-$btn-success-bg:                 $brand-success !default;
-$btn-success-border:             $btn-success-bg !default;
+$btn-success-color:              $white;
+$btn-success-bg:                 $brand-success;
+$btn-success-border:             $btn-success-bg;
 
 $btn-warning-color:              $white !default;
 $btn-warning-bg:                 $brand-warning !default;

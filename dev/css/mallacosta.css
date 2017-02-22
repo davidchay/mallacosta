@@ -6,17 +6,28 @@ body {
 }
 
 .content-logo {
-  width: 278px;
+  width: 450px;
 }
 
 @media screen and (max-width: 764px) {
   .content-logo {
     margin: 0 auto;
+    width: 350px;
   }
 }
 
 .content-logo .logo {
   float: left;
+}
+
+.content-logo .logo img {
+  width: 90px;
+}
+
+@media screen and (max-width: 764px) {
+  .content-logo .logo img {
+    width: auto;
+  }
 }
 
 .content-logo .brand {
@@ -25,16 +36,23 @@ body {
 
 .content-logo .brand .branding {
   font-family: 'PRISTINA' !important;
-  font-size: 3.2rem;
+  font-size: 5.5rem;
   border-bottom: 2px solid #ff8400;
   background: none;
   margin: 0;
   padding: 0;
-  line-height: normal;
+  line-height: .8;
 }
 
 .content-logo .brand .branding span {
   color: #00cbe8;
+}
+
+@media screen and (max-width: 764px) {
+  .content-logo .brand .branding {
+    font-size: 3.5rem;
+    line-height: normal;
+  }
 }
 
 .content-logo .brand > span {
@@ -42,7 +60,15 @@ body {
   text-transform: uppercase;
   text-align: center;
   display: block;
-  letter-spacing: 1.5px;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+}
+
+@media screen and (max-width: 764px) {
+  .content-logo .brand > span {
+    font-size: 1rem;
+    letter-spacing: 3px;
+  }
 }
 
 .list-group .active {
@@ -51,7 +77,7 @@ body {
 }
 
 .card {
-  margin-bottom: 1rem;
+  margin-bottom: .4rem;
 }
 
 .card .card-header {
@@ -59,9 +85,25 @@ body {
   color: white;
 }
 
+.card .precio {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.card .card-title {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.card .card-text {
+  padding: 0;
+  margin: 0;
+}
+
 .card .card-block {
   text-align: center;
   font-family: "Open Sans", sans-serif;
+  padding-bottom: 0;
 }
 
 #header-container {
@@ -75,17 +117,24 @@ body {
 #header-container .top-contact a {
   color: #fff;
   font-weight: 700;
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 764px) {
   #header-container .top-contact a {
     color: #ff8400;
+    font-size: 1rem;
   }
 }
 
 #header-container .branding-section {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 1.2rem;
+}
+
+#header-container nav {
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 #header-container nav .nav-link:hover, #header-container nav .nav-link:active, #header-container nav .nav-link:focus {
@@ -121,15 +170,15 @@ body {
 }
 
 section {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 
 section .section-heading {
   width: auto;
   margin: 0 auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-family: 'PRISTINA' !important;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   font-weight: 700;
   color: #292b2c;
 }
@@ -150,12 +199,12 @@ section .section-heading:after {
 
 section .section-subtitle {
   font-family: "Open Sans", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   display: block;
   width: 100%;
   text-align: center;
-  margin-bottom: 3rem;
-  color: #636c72;
+  margin-bottom: 1rem;
+  color: #000;
 }
 
 @media screen and (max-width: 576px) {
@@ -165,7 +214,7 @@ section .section-subtitle {
 }
 
 #electronica #prodcutosCard {
-  margin-bottom: 2.5rem;
+  margin-bottom: 0;
 }
 
 .product-link {

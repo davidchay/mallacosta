@@ -9,23 +9,35 @@ body{
 .content-logo{
 		@media screen and (max-width: 764px) {
 			margin: 0 auto;
+			width:350px;
 		}
-		width:278px;
+		width:450px;
+
 		.logo{
 				float: left;
+				img{
+					width: 90px;
+					@media screen and (max-width: 764px) {
+						width:auto;
+					}
+				}
 		}
 		.brand{
 			float: left;
 				.branding{
 					font-family: 'PRISTINA' !important;
-					font-size: 3.2rem;
+					font-size: 5.5rem;
 					border-bottom:2px solid $orange;
 					background: none;
 					margin:0;
 					padding:0;
-					line-height: normal;
+					line-height: .8;
 					span{
 						color:#00cbe8;
+					}
+					@media screen and (max-width: 764px) {
+						font-size: 3.5rem;
+						line-height: normal;
 					}
 				}
 				> span{
@@ -33,7 +45,12 @@ body{
 					text-transform: uppercase;
 					text-align: center;
 					display: block;
-					letter-spacing: 1.5px;
+					font-size:1.5rem;
+					letter-spacing: 5px;
+					@media screen and (max-width: 764px) {
+						font-size: 1rem;
+						letter-spacing: 3px;
+					}
 				}
 		}
 }//content-logo
@@ -44,14 +61,28 @@ body{
 	}
 }
 .card{
-	margin-bottom: 1rem;
+	margin-bottom:.4rem;
 	.card-header{
 		background-color: rgb(60,60,60);
 		color:white;
+
+	}
+	.precio{
+		font-size:2rem;
+		font-weight: 700;
+	}
+	.card-title{
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	.card-text{
+		padding: 0;
+		margin:0;
 	}
 	.card-block{
 		text-align: center;
 		font-family:$font-family-sans-serif;
+		padding-bottom:0;
 	}
 }
 #header-container{
@@ -63,17 +94,21 @@ body{
 	.top-contact a{
 		color:$white;
 		font-weight: 700;
+		font-size: 1.5rem;
 		@media screen and (max-width: 764px) {
 			color:$orange;
+			font-size:1rem;
 		}
 	}
 	.branding-section{
-		padding-top:2.5rem;
-		padding-bottom: 2.5rem;
+		padding-top:2rem;
+		padding-bottom: 1.2rem;
 
 	}
 
 	nav{
+		font-size:1.2rem;
+		font-weight: 700;
 		.nav-link{
 			&:hover,&:active,&:focus{
 				background-color: $orange;
@@ -107,13 +142,13 @@ body{
 	}
 }
 section{
-	padding:3rem 0;
+	padding:2rem 0;
 	.section-heading{
 		width: auto;
 		margin:0 auto;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 		font-family: 'PRISTINA' !important;
-		font-size:3.5rem;
+		font-size:4.5rem;
 		font-weight: 700;
 		color:$gray-dark;
 		&:after{
@@ -129,12 +164,12 @@ section{
 	}
 	.section-subtitle{
 		font-family:$font-family-sans-serif;
-		font-weight: 300;
+		font-weight: 500;
 		display:block;
 		width:100%;
 		text-align:center;
-		margin-bottom:3rem;
-		color: $gray-light ;
+		margin-bottom:1rem;
+		color: #000;
         @media screen and (max-width: 576px) {
             font-size:1.2rem;
         }
@@ -144,7 +179,7 @@ section{
 
 #electronica{
 	#prodcutosCard{
-		margin-bottom: 2.5rem;
+		margin-bottom: 0;
 	}
 }
 .product-link {
@@ -335,7 +370,7 @@ footer{
 	.text-footer{
 		span{
 			display: block;
-			
+
 
 		}
 	}

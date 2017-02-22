@@ -18,7 +18,7 @@ var path={
 		},
 		css:'./dev/css/', //output
 		cssStyle:'./dev/css/style.css',
-		cssMalla:'./dev/css/mallacosta.css', 
+		cssMalla:'./dev/css/mallacosta.css',
 		libs:'./dev/libs-js/*.js', //work
 		scriptLibs:'./dev/js/script.js',
 		script:'./dev/js/mallacosta.js',
@@ -65,7 +65,7 @@ gulp.task('dist',function(){
         progressive: true,
         interlaced: true
     })).pipe(gulp.dest('./dist/data/img/'));
-	
+
 });
 
 gulp.task('style',function(){
@@ -80,7 +80,7 @@ gulp.task('style',function(){
 	.pipe(concat('style.css'))
 	.pipe(gulp.dest(path.dev.css))
 	.pipe(connect.reload());
-	
+
 });
 
 gulp.task('custom',function(){
@@ -95,7 +95,7 @@ gulp.task('custom',function(){
 	.pipe(concat('mallacosta.css'))
 	.pipe(gulp.dest(path.dev.css))
 	.pipe(connect.reload());
-	
+
 
 });
 
@@ -105,7 +105,7 @@ gulp.task('js',function(){
 	.pipe(concat('script.js',{newLine:';'}))
 	.pipe(gulp.dest(path.dev.js))
 	.pipe(connect.reload());
-	
+
 });
 
 gulp.task('html',function(){
@@ -128,7 +128,7 @@ gulp.task('script',function(){
 
 gulp.task('connect',function(){
 	connect.server({
-		root:'./dist/',
+		root:'./dev/',
 		port:8000,
 		livereload:true
 	});
@@ -138,7 +138,7 @@ gulp.task('watch',function(){
 	gulp.watch(path.dev.scss.style,['style']);
 	gulp.watch(path.dev.scss.custom,['custom']);
 	gulp.watch(path.dev.libs,['js']);
-	
+
 	gulp.watch(path.dev.html,['html']);
 });
 
