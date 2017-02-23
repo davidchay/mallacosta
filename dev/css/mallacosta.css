@@ -137,6 +137,20 @@ body {
   font-weight: 700;
 }
 
+@media screen and (max-width: 1199px) {
+  #header-container nav {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #header-container nav {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+}
+
 #header-container nav .nav-link:hover, #header-container nav .nav-link:active, #header-container nav .nav-link:focus {
   background-color: #ff8400;
 }
@@ -354,7 +368,7 @@ article .titulo {
   margin: 1.5rem auto;
   margin-top: 3.5rem;
   font-family: 'PRISTINA' !important;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   font-weight: 700;
   color: #292b2c;
 }
@@ -408,23 +422,22 @@ footer {
   background-color: #3c3c3c;
   padding: 1.5rem 0;
   color: #fff;
-}
+  /* .content-logo{
+		width: 245px;
+		.logo img{
+			width: 90%
+		}
+		.brand{
+			.branding{
+				font-size:2.7rem;
+				border-bottom:1px solid $orange;
+			}
+			> span{
+				font-size: .8rem;
+			}
+		}
 
-footer .content-logo {
-  width: 245px;
-}
-
-footer .content-logo .logo img {
-  width: 90%;
-}
-
-footer .content-logo .brand .branding {
-  font-size: 2.7rem;
-  border-bottom: 1px solid #ff8400;
-}
-
-footer .content-logo .brand > span {
-  font-size: .8rem;
+	} */
 }
 
 footer .text-footer span {
