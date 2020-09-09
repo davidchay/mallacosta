@@ -35,7 +35,7 @@ var path={
 	}
 };
 
-gulp.task('dist',function(){
+gulp.task('dist', async function(){
 	gulp.src(path.dev.cssMalla)
 	.pipe(cssmin())
 	.pipe(gulp.dest(path.dist.css));
@@ -68,7 +68,7 @@ gulp.task('dist',function(){
 
 });
 
-gulp.task('style',function(){
+gulp.task('style', async function(){
 	gulp.src(path.dev.scss.style)
 	.pipe(sass({
 		 outputStyle:'expanded',
@@ -83,7 +83,7 @@ gulp.task('style',function(){
 
 });
 
-gulp.task('custom',function(){
+gulp.task('custom', async function() {
 	gulp.src(path.dev.scss.custom)
 	.pipe(sass({
 		outputStyle:'expanded',
@@ -100,7 +100,7 @@ gulp.task('custom',function(){
 });
 
 
-gulp.task('js',function(){
+gulp.task('js', async function(){
 	gulp.src(path.dev.libs)
 	.pipe(concat('script.js',{newLine:';'}))
 	.pipe(gulp.dest(path.dev.js))
@@ -108,7 +108,7 @@ gulp.task('js',function(){
 
 });
 
-gulp.task('html',function(){
+gulp.task('html', async function(){
 	gulp.src(path.dev.html)
 	.pipe(gulp.dest(path.dist.html))
 	.pipe(connect.reload());
@@ -126,7 +126,7 @@ gulp.task('script',function(){
 
 
 
-gulp.task('connect',function(){
+gulp.task('connect', async function(){
 	connect.server({
 		root:'./dev/',
 		port:8000,
@@ -134,12 +134,12 @@ gulp.task('connect',function(){
 	});
 });
 
-gulp.task('watch',function(){
-	gulp.watch(path.dev.scss.style,['style']);
-	gulp.watch(path.dev.scss.custom,['custom']);
-	gulp.watch(path.dev.libs,['js']);
+gulp.task('watch', async function(){
+	gulp.watch(path.dev.scss.style, gulp.series ('style'));
+	gulp.watch(path.dev.scss.custom, gulp.series ('custom'));
+	gulp.watch(path.dev.libs, gulp.series('js'));
 
-	gulp.watch(path.dev.html,['html']);
+	gulp.watch(path.dev.html, gulp.series ('html'));
 });
 
-gulp.task('default',['js','style','custom','html','connect','watch']);
+gulp.task('default', gulp.series('js','style','custom','html','connect','watch'));
