@@ -7,6 +7,7 @@ Estilos de mmalacosta
 
 body{
 	overflow-x: hidden;
+	font-family: $font-family-sans-serif;
 }
 
 
@@ -97,35 +98,20 @@ body{
 	}
 }
 .card{
-	margin-bottom:.4rem;
-	.card-header{
-		background-color: rgb(60,60,60);
-		color:white;
-
-	}
 	.precio{
 		font-size:2rem;
 		font-weight: 700;
 	}
 	.card-title{
-		padding-bottom: 0;
-		margin-bottom: 0;
+		font-weight: 700;
 	}
-	.card-text{
-		padding: 0;
-		margin:0;
-	}
-	.card-block{
-		text-align: center;
-		font-family: $font-family-sans-serif;
-		padding-bottom:0;
-	}
+	
 }
 #header-container{
 	background-image: url('../images/bg_top.png');
 	background-repeat: no-repeat;
 	background-position: right top;
-	background-size: cover;
+	//background-size: cover;
 	background-color: rgb(60,60,60);
 	color:$white;
 	.contact-top{
@@ -140,13 +126,13 @@ body{
 			text-align: right;
 			margin-left: auto;
 			margin-right:0;
-			font-size: 1.1rem;	
+			font-size: 1.15rem;	
 			.horario {
-				background-color: $orange;
-				text-align: center;
-				border-radius: 7px;
-				padding: 15px;
-				margin-top: 10px;
+				//background-color: $orange;
+				//text-align: center;
+				//border-radius: 7px;
+				//padding: 15px;
+				//margin-top: 10px;
 			}
 		}	
 		a{
@@ -174,7 +160,9 @@ body{
 				.nav-item{
 					color:$white;
 					&.active {
-						color: $black;
+						background: darken( $brand-primary, 10%);
+						color: $white;
+						
 					}
 				}
 				.nav-link{
@@ -218,7 +206,6 @@ body{
 			}//.navbar-nav
 			.navbar-text {
 				flex-basis: 40%;
-				//padding: 1rem;
 				text-align: right;
 				color: $white;
 				a{
@@ -227,7 +214,7 @@ body{
 					text-decoration: none;
 					display: inline-block;
 					&:hover{
-						@extend .btn-dark;
+						@extend .btn-outline-secondary;
 						color: $white;
 					}
 				}
@@ -246,36 +233,38 @@ body{
 
 
 }
-section{
-	padding:2rem 0;
-	.section-heading{
+section, article{
+	padding:3.5rem 0;
+	.section-heading, .title{
 		width: auto;
 		margin:0 auto;
-		margin-bottom: 1rem;
-		//font-family: 'PRISTINA' !important;
-		font-size:2.5rem;
+		margin-bottom: 2.5rem;
+		font-size: $h1-font-size;
 		font-weight: 700;
-		color:$gray-dark;
+		color: $dark;
 		text-transform: uppercase;
+		position: relative;
 		&:after{
+			position: relative;
 			display:block;
 			content:"";
-			width:75%;
-			border-bottom:3px solid $orange;
+			width:25%;
+			border-bottom:5px dotted $orange;
 			margin:0 auto;
+			bottom: -5px;
 		}
         @media screen and (max-width: 576px) {
-            font-size:2.5rem;
+            font-size:2rem;
         }
 	}
-	.section-subtitle{
-		font-family:$font-family-sans-serif;
-		font-weight: 500;
+	.section-subtitle {
 		display:block;
-		width:100%;
+		width:70%;
 		text-align:center;
-		margin-bottom:1rem;
-		color: #000;
+		margin-top:0;
+		margin:0 auto 3rem ;
+		color: $gray-light;
+		font-size: $h2-font-size;
         @media screen and (max-width: 576px) {
             font-size:1.2rem;
         }
@@ -283,201 +272,85 @@ section{
 
 }
 
-#electronica{
-	#prodcutosCard{
-		margin-bottom: 0;
-	}
-}
-.product-link {
-            display: block;
-            position: relative;
-            max-width: 400px;
-            margin: 0 auto;
-            .product-hover {
-                background: fade-out($brand-primary, .5);
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                opacity: 0;
-                transition: all ease 0.5s;
-                -webkit-transition: all ease 0.5s;
-                -moz-transition: all ease 0.5s;
-                &:hover {
-                    opacity: 1;
-                }
-                .product-hover-content {
-                    position: absolute;
-                    width: 100%;
-                    height: 20px;
-                    font-size: 20px;
-                    text-align: center;
-                    top: 50%;
-                    margin-top: -12px;
-                    color: white;
-                    i {
-                        margin-top: -12px;
-                    }
-                    h3,
-                    h4 {
-                        margin: 0;
-                    }
-                }
-            }
-		}
-.portfolio-modal {
-    .modal-dialog{
-        margin: 0;
-        height: 100%;
-        width: auto;
-				position: relative;
-    }
-    .modal-content {
-        border-radius: 0;
-        background-clip: border-box;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        border: none;
-        min-height: 100%;
-				width: inherit;
-				position: absolute;
-        padding: 100px 0;
-				left:0;
-				right:0;
-        text-align: center;
-        h2 {
-            margin-bottom: 15px;
-            font-size: 3em;
-        }
-        p {
-            margin-bottom: 30px;
-        }
-        p.item-intro {
-            margin: 20px 0 30px;
-            font-family:$font-family-sans-serif;
-            font-style: italic;
-            font-size: 16px;
-        }
-        ul.list-inline {
-            margin-bottom: 30px;
-            margin-top: 0;
-        }
-        img {
-            margin-bottom: 30px;
-        }
-    }
-    .close-modal {
-        position: absolute;
-        width:75px;
-        height:75px;
-        background-color:transparent;
-        top: 25px;
-        right: 25px;
-        cursor: pointer;
-        &:hover {
-            opacity: 0.3;
-        }
-        .lr {
-            height:75px;
-            width:1px;
-            margin-left:35px;
-            background-color:$gray-dark;
-            transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            /* IE 9 */
-            -webkit-transform: rotate(45deg);
-            /* Safari and Chrome */
-            z-index:1051;
-            .rl {
-                height:75px;
-                width:1px;
-                background-color:$gray-dark;
-                transform: rotate(90deg);
-                -ms-transform: rotate(90deg);
-                /* IE 9 */
-                -webkit-transform: rotate(90deg);
-                /* Safari and Chrome */
-                z-index:1052;
-            }
-        }
-    }
-    .modal-backdrop {
-        opacity: 0;
-        display: none;
-    }
-}
 /*Estylos para article - paginas*/
-article{
-	.titulo{
-		margin: 1.5rem auto;
-		margin-top:3.5rem;
-		font-family: 'PRISTINA' !important;
-		font-size:4.5rem;
-		font-weight: 700;
-		color:$gray-dark;
-		&:after{
-			display:block;
-			content:"";
-			width:75%;
-			border-bottom:3px solid $orange;
-			margin:0 auto;
+.cta-bottom{
+	margin-top: 50px;
+	margin-bottom: -30px;
+	.cta-bottom-card {
+		background-color: $brand-secund;
+		color: $white;
+		display: flex;
+		box-shadow: 0px 25px 30px rgba($brand-secund, 0.3);
+    	padding: 20px 20px;
+		border-radius: 20px;
+		height: 100%;
+		a {
+			color: $dark;
+			font-weight: bold;
 		}
-        @media screen and (max-width: 576px) {
-            font-size:2.5rem;
-        }
-
+		.cta-bottom-card-title {
+			font-weight: 700;
+			margin-bottom: 1.2rem;
+			font-size: 1.5rem;
+		}
 	}
-	.subtitulo{
-		font-size: 2rem;
-		font-weight: 300;
-		margin-bottom: 3.5rem;
-        @media screen and (max-width: 576px) {
-            font-size:1.5rem;
-        }
-	}
-}
-.call-to-action{
-	background-color: $orange;
-	margin-top: 3.5rem;
-	padding:25px 0;
-	color:$white;
-	text-align: center;
-	font-size:1.3rem;
-	p{
-		margin-bottom: 0;
-		line-height: normal;
-	}
-	.contacto{
-		margin-top:1.5rem;
-	}
-
 }
 /*stlos del footer*/
 footer{
 	//border-top:1px solid $brand-primary;
-	background-color: rgb(60,60,60);
-	padding: 1.5rem 0;
+	background-color: $gray-dark;
 	color:$white;
-	/* .content-logo{
-		width: 245px;
-		.logo img{
-			width: 90%
-		}
-		.brand{
-			.branding{
-				font-size:2.7rem;
-				border-bottom:1px solid $orange;
-			}
-			> span{
-				font-size: .8rem;
-			}
-		}
+	
+	h3,h4,h5{
+		font-size: 1.2rem;
+		font-weight: 700;
+		color: $gray-400;
+		color: $brand-primary;
+		margin-bottom: 1.5rem;
 
-	} */
+	}
+	ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			margin-bottom: 10px;
+			
+			a {
+				color: $white;
+				transition: all .2s ease-in;
+				//font-size: 14px;
+				&:hover {
+					text-decoration: none;
+					color: $brand-secund;
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+	a {
+		color: $white;
+		&:hover{
+			color: $brand-secund;
+			text-decoration: none;
+		}
+	}
 	.text-footer{
 		span{
-			display: block;
+			//display: block;
 
 
+		}
+	}
+	.copyright{
+		background: darken($dark , 10%);
+		font-size: 14px;
+		.icon-heart {
+			color: $red;
+		}
+		.codipix {
+			color: $brand-secund;
+			font-weight: bold;
 		}
 	}
 }

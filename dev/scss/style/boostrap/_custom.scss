@@ -5,6 +5,8 @@
 // Start with assigning color names to specific hex values.
 @import "functions";
 @import "variables";
+@import "../fuentes/fonts.scss";
+
 
 $white:  #fff !default;
 $black:  #000 !default;
@@ -33,3 +35,5 @@ $brand-info:                $teal !default;
 $brand-warning:             $orange !default;
 $brand-danger:              $red !default;
 $brand-inverse:             $gray-dark !default;
+
+$font-family-sans-serif: 'Open Sans';

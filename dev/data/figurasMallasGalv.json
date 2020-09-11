@@ -5,7 +5,7 @@
     },
     {
       "titulo":"Malla Galvanizada de 2m. de alto, sin pua, sobre terreno narural.",
-      "image":"data/img/mallaGalv02.jpg"
+      "image":"data/img/mallaGalv16.jpg"
     },
     {
       "titulo":"Malla Galvanizada de 1.5m. de alto, con concertina.",
@@ -16,8 +16,8 @@
       "image":"data/img/mallaGalv04.jpg"
     },
     {
-      "titulo":"Malla antiescalable de 2.5m. de alto.",
-      "image":"data/img/mallaGalv05.jpg"
+      "titulo":"Instalacion de malla em residencial.",
+      "image":"data/img/mallaGalv17.jpg"
     },
     {
       "titulo":"PVC Negro anti infamable de 2.40m. de alto, con balla superior e inferior.",
@@ -36,28 +36,16 @@
       "image":"data/img/mallaGalv09.jpg"
     },
     {
-      "titulo":"Malla con cinta PVC de 2m de alto, con pua, sobre terreno natural.",
-      "image":"data/img/mallaGalv10.jpg"
+      "titulo":"Malla de 2m de alto, sobre terreno natural.",
+      "image":"data/img/mallaGalv18.jpg"
     },
     {
-      "titulo":"Malla galvanizada de 2m de alto, con cinta PVC, sobre barda.",
-      "image":"data/img/mallaGalv11.jpg"
+      "titulo":"Malla galvanizada de 2m de alto, en cancha deportiva.",
+      "image":"data/img/mallaGalv19.jpg"
     },
     {
-      "titulo":"Malla galvanizada de 2m de alto, con cinta PVC a dos colores, sin pua, sobre piso de ladrillo.",
-      "image":"data/img/mallaGalv12.jpg"
-    },
-    {
-      "titulo":"Malla galvanizada de 2m de alto, con cinta PVC, con concertina.",
-      "image":"data/img/mallaGalv13.jpg"
-    },
-    {
-      "titulo":"Malla galvanizada de 2.5m de alto, con cinta PVC, con pua, sobre barda.",
-      "image":"data/img/mallaGalv14.jpg"
+      "titulo":"Malla galvanizada de 2m de alto, con cinta PVC, sin pua.",
+      "image":"data/img/mallaGalv20.jpg"
     }
-
-
-
-
 
 ]

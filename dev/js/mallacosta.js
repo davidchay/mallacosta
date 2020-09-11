@@ -1,14 +1,3 @@
-/*$( window ).resize(function() {
-  if($(window).width()<768){
-    //$('#navigation').addClass('nav-justified');
-    $('#navigation li > a > span ').addClass('smlts');
-  }else{
-    
-    //$('#navigation').removeClass('nav-justified');
-    $('#navigation li > a > span ').removeClass('smlts');
-  }
-});
-*/
 $(function () {
   ///Mustache template
   if($('#productCardTlp').length){
@@ -44,6 +33,8 @@ $(function () {
     
   }
 
+  if( typeof Handlebars === 'function'){
+
   Handlebars.registerHelper('listFirstThree', function (context, options)
   {
     var ret = "", data;
@@ -59,7 +50,7 @@ $(function () {
     }
     return ret;
   });
-
+  }
   //json concertina
   if($('#imagesConcertinaTlp').length){
     $.getJSON('../data/concertina.json', function(data) {
@@ -75,5 +66,5 @@ $(function () {
     });
     
   }
-
+  
 });
