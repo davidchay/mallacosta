@@ -1,5 +1,5 @@
 $(function () {
-  ///Mustache template
+  /// template
   if($('#productCardTlp').length){
     $.getJSON('../data/productos.json', function(data) {
       var prd={};
@@ -19,6 +19,7 @@ $(function () {
     });
 
   }
+  
   if($('#galleryItem').length){
     $.getJSON('../data/figurasMallasGalv.json', function(data) {
       var items={};
@@ -33,26 +34,27 @@ $(function () {
     
   }
 
-  if( typeof Handlebars === 'function'){
+ 
 
-  Handlebars.registerHelper('listFirstThree', function (context, options)
-  {
-    var ret = "", data;
-    if (options.data) {
-    data = Handlebars.createFrame(options.data);
-  }
+    Handlebars.registerHelper('listFirstThree', function (context, options)
+    {
+      var ret = "", data;
+      if (options.data) {
+      data = Handlebars.createFrame(options.data);
+    }
     for (var i = 0, j = 3; i < j; i++)
     {
-    if (data) {
-      data.index = i;
-    }
+      if (data) {
+       data.index = i;
+      }
       ret = ret + options.fn(context[i],{data:data});
     }
     return ret;
   });
-  }
+  
   //json concertina
-  if($('#imagesConcertinaTlp').length){
+  if($('#imagesConcertinaTlp').length)
+  {
     $.getJSON('../data/concertina.json', function(data) {
       var concertina={};
       concertina.imagenes=data;
