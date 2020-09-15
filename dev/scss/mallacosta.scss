@@ -5,6 +5,26 @@ Estilos de mmalacosta
 @import "style/boostrap/mixins";
 @import "style/boostrap/buttons";
 
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes grow {
+	from {	
+		-webkit-transform: scale(.0001); 
+		transform: scale(.0001);
+	}
+	to {	
+		-webkit-transform: scale(.99); 
+		transform: scale(.99);
+	}
+}
+
 body{
 	overflow-x: hidden;
 	font-family: $font-family-sans-serif;
@@ -111,7 +131,10 @@ body{
 	background-image: url('../images/bg_top.png');
 	background-repeat: no-repeat;
 	background-position: right top;
-	//background-size: cover;
+	background-size: cover;	
+	@media screen and (min-width: 764px) {
+	 background-size: auto;	
+	}
 	background-color: rgb(60,60,60);
 	color:$white;
 	.contact-top{
@@ -172,7 +195,11 @@ body{
 						background-color: $orange;
 						color: $white;
 					}
-					&.inicio, &.productos, &.ubicacion, &.contacto, &.llamanos{
+					&.inicio, 
+					&.productos, 
+					&.ubicacion, 
+					&.contacto, 
+					&.llamanos{
 						&::before{
 							font-family: 'icomoon';
 							width: 100%;
@@ -180,7 +207,6 @@ body{
 							font-size: 2em;
 							text-align: center;
 						}
-						
 					}
 					&.inicio::before {	content: "\e904";	}
 					&.productos::before {	content: "\e90a";	}
@@ -233,8 +259,8 @@ body{
 
 
 }
-section, article{
-	padding:3.5rem 0;
+section, article, .section-header{
+	padding:2rem 0;
 	.section-heading, .title{
 		width: auto;
 		margin:0 auto;
@@ -243,6 +269,7 @@ section, article{
 		font-weight: 700;
 		color: $dark;
 		text-transform: uppercase;
+		text-align: center;
 		position: relative;
 		&:after{
 			position: relative;
@@ -262,7 +289,7 @@ section, article{
 		width:70%;
 		text-align:center;
 		margin-top:0;
-		margin:0 auto 3rem ;
+		margin:0 auto;
 		color: $gray-light;
 		font-size: $h2-font-size;
         @media screen and (max-width: 576px) {
@@ -354,3 +381,25 @@ footer{
 		}
 	}
 }
+
+#loading {
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 1;
+	background-color: #fff;
+	z-index: 99;
+  }
+  
+  #loading-image {
+	position: absolute;
+	width: 64px;
+	z-index: 100;
+	animation: grow .75s infinite;
+  	
+  }

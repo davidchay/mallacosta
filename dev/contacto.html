@@ -12,125 +12,38 @@
           <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/mallacosta.css">
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/popper.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/handlebars.js"></script>
+    <script src="./js/mallacosta.js"></script>
+    <script>
+      window.addEventListener("load", function(event) {
+        $('#loading').fadeOut('slow');
+      });
+    </script>
   </head>
    <body>
+    <div id="loading">
+      <img id="loading-image" src="./images/mallacosta-orange.png" alt="Loading..." />
+    </div>
     <header id="header-container">
-      <div class="container py-5">
-
-        <div class="row align-items-center">
-          <!-- branding-section col-12 pull-md-6 col-md-6 columna text-md-left text-center -->
-          <div class="branding-section  col-sm-12 col-md-6">
-            <div class="content-logo">
-              <a href="/"></a>
-              <div class="logo">
-                <img class="responsive" src="images/mallacosta.png" alt="">
-              </div>
-              <div class="brand">
-                <div class="branding">Malla<span>Costa</span></div>
-                <span>Tapachula, Chiapas</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Top-contact col-12 push-md-6 col-md-6-->
-          <div class="col-sm-12 col-md-6">
-            <div class="row ">
-              <div class="contact-top">
-                               
-                <!--<a href="http://mallacosta.com/">www.mallacosta.com</a>-->
-                <p class="m-0">
-                  <span class="icon-mail-line"></span>
-                  <a href="mailto:malla.costa@hotmail.com">malla.costa@hotmail.com</a>
-                </p>
-                  
-                <div class=" d-md-none d-flex flex-row justify-content-around my-2">
-                  <a href="tel:9626265752" title="Teléfono de oficina (962) 62 6 57 52" class="d-inline">
-                    <span class="icon-phone"></span> Tel. (962) 62 6 57 52
-                  </a>
-                  <a href="tel:9621119501" title="llamanos al Cel. 962 111 95 01" class="d-inline" >
-                    <span class="icon-mobile"></span> Cel. 962 111 95 01
-                  </a>
-                </div>  
-                
-                <p class="m-0">
-                  <span class="icon-map-pin"></span> Central Norte No. 61 d, entre 7a y 9a. 
-                  <span class="d-block d-sm-inline">Tapachula, Chiapas.</span>
-                </p>
-                
-
-                <div class="horario">
-                  <span class="icon-clock-line"></span> Abierto de 8:00 a 15:00 Hrs. Lun - Sáb
-                </div>
-
-               
-                
-
-              </div>
-            </div>
-          </div>
-          <!--End Top-contact-->
-
-        </div> <!-- ./row -->
-      </div><!-- ./container -->
-     
-      <nav class="navbar navbar-expand  navbar-light bg-primary">
-        <div class="container">
-          
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link inicio" href="./">Inicio</a>
-                </li>
-                
-                <li class="nav-item dropdown">
-                  <a class="nav-link productos dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                    Productos</a>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="lavaderos-de-concreto.html">Lavaderos de concreto</a>
-                    <a class="dropdown-item" href="cercas-de-malla-ciclon.html">Cercas de malla ciclon</a>
-                    <a class="dropdown-item" href="cercas-electricas.html">Cercas electricas</a>
-                    <a class="dropdown-item" href="concertinas.html">Concertinas</a>
-                  </div>
-                </li>
-                <li class="nav-item ">
-                  <a class="nav-link ubicacion" href="mallacosta-tapachula-ubicacion.html">Ubicación</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link contacto" href="contacto.html">Contacto</a>
-                </li>
-                
-              </ul>
-              <span class="navbar-text">
-                
-                <a href="tel:9626265752" title="Teléfono de oficina (962) 62 6 57 52" class="btn-tel btn btn-lg btn-link">
-                  <span class="icon-phone"></span> 
-                  (962) 62 6 57 52
-                </a>
-                <a href="tel:9621119501" title="llamanos al Cel. 962 111 95 01" class="btn-tel btn btn-lg btn-link" >
-                  <span class="icon-mobile"></span>
-                   962 111 95 01
-                </a>
-              </span>
-           
-              
-            </div>
-            <!--End TopContact-->
-          
-        </div><!--./container-->
-      </nav>
+      
     </header>
     <main>
 
-        <div class="jumbotron jumbotron-fluid m-0 bg-dark">
+        <div class="jumbotron jumbotron-fluid m-0 bg-light py-0">
             <section class="container text-center ">
               <span class="icon-send icon-4x text-secondary"></span>  
-              <h1 class="section-heading text-white mt-2">Contactanos</h1>
-              <p class="section-subtitle text-white lead font-weight-bold">Contactanos, será un gusto poder ayudarte.</p>
+              <h1 class="section-heading mt-2 mb-0">Contactanos</h1>
+             
             </section>
         </div>
 
         <section class="container">
           <div class="row ">
-            <div class="col-12 col-md-6">
+            <!--            <div class="col-12 col-md-6">
                 <div class="card border-light rounded-0 bg-white shadow-lg mb-5" style="border-bottom: 4px solid #ff8400 !important;">
                 
                     <div class="card-body ">
@@ -175,16 +88,16 @@
                     </div>
 
                 </div>
-            </div>
-            <div class="col-12 col-md-6">
+            </div>-->
+            <div class="col-12 col-md-6-">
                 <div class="card border-light rounded-lg bg-white shadow-lg mb-5 " style="border-bottom: 4px solid #ff8400 !important;">
                     <div class="card-body">
-                        <h4 class="card-title mb-4">Para cotizar una cerca de malla ciclon por favor indicanos:</h4>
+                        <h4 class="card-title mb-4 text-center">Para cotizar una cerca de malla ciclon por favor indicanos:</h4>
                     
-                        <p class="d-flex align-items-center"><span class="icon-checkmark -icon-2x text-secondary mr-3"></span> Ubicacion: indicando municipio , lugar preciso , si se llega por carretera ò terraceria y distancia a la cabecera municipal.</p>
+                        <p class="d-flex align-items-center"><span class="icon-checkmark -icon-2x text-secondary mr-3"></span> Ubicación: indicando municipio , lugar preciso , si se llega por carretera ò terraceria y distancia a la cabecera municipal.</p>
                         <p class="d-flex align-items-center"><span class="icon-checkmark -icon-2x text-secondary mr-3"></span> Altura de la malla , si es galvanizada ò con recub PVC.</p>
                         <p class="d-flex align-items-center"><span class="icon-checkmark -icon-2x text-secondary mr-3"></span> Si lleva ò no , 3 hilos de alambre de pua.</p>
-                        <p class="d-flex align-items-center"><span class="icon-checkmark -icon-2x text-secondary mr-3"></span> Si el terreno es plano , escalonado y/ ò con pendientes.</p>
+                        <p class="d-flex align-items-center"><span class="icon-checkmark -icon-2x text-secondary mr-3"></span> Si el terreno es plano , escalonado y / ò con pendientes.</p>
                         <p class="d-flex align-items-center"><span class="icon-checkmark -icon-2x text-secondary mr-3"></span> Si la colacacion  se hara sobre terreno natural , sobre muro ò sobre algun pavimento.</p>
                         <p class="d-flex align-items-center"><span class="icon-checkmark -icon-2x text-secondary mr-3"></span> Si lleva puertas (1 m) ò portones (4 m) y su ubicacion.</p>
                     </div>  
@@ -206,79 +119,10 @@
           </div>  
         </section>
     </main>
-    <footer>
-      <div class="container py-5">
-        <div class="row mt-5">
-          <div class="col-12 col-sm-12 col-md-6 ">
-            <div class="content-logo bottom">
-              <a href="/"></a>
-              <div class="logo">
-                <img class="responsive" src="images/mallacosta.png" alt="">
-              </div>
-              <div class="brand">
-                <h2 class="branding">Malla<span>Costa</span></h2>
-                <span>Tapachula, Chiapas</span>
-              </div>
-            </div>
-            <p class="text-center text-md-left">
-              Central Norte 61 d, entre 7a y 9a. Tapachula, Chiapas.<br>
-              Abierto de 8:00 a 15:00 Hrs. Lun - Sáb
-
-            </p>
-          </div>
-          <div class="text-footer col-12 col-sm-6 col-md-3  text-center text-md-left ">
-            <h3>Productos</h3>
-            <ul class="unlist">
-              <li>
-                <a href="/lavaderos-de-concreto.html">Lavaderos de concreto</a>
-              </li>
-              <li>
-                <a href="/cercas-de-malla-ciclon.html">Cercas de malla ciclon</a>
-              </li>
-              <li>
-                <a href="/cercas-electricas.html">Cercas electricas</a>
-              </li>
-              <li>
-                <a href="/concertinas.html">Concertinas</a>
-              </li>
-            </ul>
-          </div>
-          <div class="text-footer col-12 col-sm-6 col-md-3 text-center text-md-left ">
-            <h3>Contactanos</h3>
-            <p>
-              <a href="tel:9626265752">
-                <span class="icon-phone-line"></span>
-                Tel: (962) 62 6 57 52
-              </a>
-            </p>
-            <p>
-              <a href="tel:9621119501">
-                <span class="icon-mobile"></span>
-                Cel: 962 111 9501
-              </a>
-            </p>  
-            <p>
-              <a href="mailto:malla.costa@hotmail.com">
-                <span class="icon-mail-line"></span>
-                malla.costa@hotmail.com
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid mt-3 copyright">
-        <div class="row py-3">
-          <div class="col-12 text-center">
-            Copyright &copy; 2020. <strong>MallaCosta</strong>, Todos los derechos reservados | Estge sitio fue creado con <span class="icon-heart"></span>  por  <a class="codipix" href="https://codipix.com">codipix</a>
-          </div>
-          
-        </div>
-      </div>
+    <footer id="footer-container">
+     
     </footer>
     
-    <script src="./js/jquery.js"></script>
-    <script src="./js/popper.js"></script>
-    <script src="./js/bootstrap.js"></script>
-    <script src="./js/mallacosta.js"></script>
+    
   </body>
 </html>

@@ -56,6 +56,9 @@ gulp.task('dist', async function(){
 	.pipe(jsonminify())
 	.pipe(gulp.dest('./dist/data/'));
 
+	gulp.src('./dev/templates/*.hbs')
+	.pipe(gulp.dest('./dist/templates/'));
+
 	gulp.src('./dev/*.html')
 	.pipe(gulp.dest('./dist/'));
 

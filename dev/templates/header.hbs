@@ -1,0 +1,105 @@
+<div class="container py-5">
+
+        <div class="row align-items-center">
+          <!-- branding-section col-12 pull-md-6 col-md-6 columna text-md-left text-center -->
+          <div class="branding-section  col-sm-12 col-md-6">
+            <div class="content-logo">
+              <a href="/"></a>
+              <div class="logo">
+                <img class="responsive" src="images/mallacosta.png" alt="">
+              </div>
+              <div class="brand">
+                <h1 class="branding">Malla<span>Costa</span></h1>
+                <span>Tapachula, Chiapas</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Top-contact col-12 push-md-6 col-md-6-->
+          <div class="col-sm-12 col-md-6">
+            <div class="row ">
+              <div class="contact-top">
+                               
+                <!--<a href="http://mallacosta.com/">www.mallacosta.com</a>-->
+                <p class="m-0">
+                  <span class="icon-mail-line"></span>
+                  <a href="mailto:malla.costa@hotmail.com">{{email}}</a>
+                </p>
+                
+                  
+                <div class=" d-md-none d-flex flex-row justify-content-around my-2">
+                  <a href="tel:9626265752" title="Teléfono de oficina {{telefono}}" class="d-inline">
+                    <span class="icon-phone"></span> Tel. {{telefono}}
+                  </a>
+                  <a href="tel:9621119501" title="llamanos al Cel. {{celular}}" class="d-inline" >
+                    <span class="icon-mobile"></span> Cel. {{celular}}
+                  </a>
+                </div>  
+                
+                <p class="m-0">
+                  <span class="icon-map-pin"></span> {{direccion}} 
+                  
+                </p>
+                
+
+                <div class="horario">
+                  <span class="icon-clock-line"></span> {{horario}}
+                </div>
+
+               
+                
+
+              </div>
+            </div>
+          </div>
+          <!--End Top-contact-->
+
+        </div> <!-- ./row -->
+      </div><!-- ./container -->
+     
+      <nav class="navbar navbar-expand  navbar-light bg-primary">
+        <div class="container">
+          
+              <ul class="navbar-nav">
+
+                {{#each rutas}}
+                  {{#ifObject this.route}}
+                    <li class="nav-item dropdown {{isMenuActive this.route}}">
+                      <a class="nav-link {{this.class}} dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        {{this.title}}
+                      </a>
+                      <div class="dropdown-menu">
+                        {{#each this.route}}
+                            <a class="dropdown-item {{isMenuActive this.route}}" href="{{this.route}}">{{this.title}}</a>
+                          
+                        {{/each}}
+                      </div>
+                    </li>
+                    
+                    {{else}}
+                      <li class="nav-item {{isMenuActive this.route}}">
+                        <a class="nav-link {{this.class}}" href="{{this.route}}">{{this.title}}</a>
+                      </li>
+                  {{/ifObject}}
+                {{/each}}
+
+               
+              </ul>
+              <span class="navbar-text">
+                
+                <a href="tel:{{cleanTel telefono}}" title="Teléfono de oficina {{telefono}}" class="btn-tel btn btn-lg btn-link">
+                  <span class="icon-phone"></span> 
+                  {{telefono}}
+                </a>
+                <a href="tel:{{cleanTel celular}}" title="llamanos al Cel. {{celular}}" class="btn-tel btn btn-lg btn-link" >
+                  <span class="icon-mobile"></span>
+                   {{celular}}
+                </a>
+              </span>
+           
+              
+            </div>
+            <!--End TopContact-->
+          
+        </div><!--./container-->
+      </nav>
